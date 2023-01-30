@@ -64,5 +64,10 @@
     background-color: #5996e6;
   }
 
+  @media (max-width: 650px) {
+    .modal-content {
+        max-width: 75%;
+      }
+  }
 
   
