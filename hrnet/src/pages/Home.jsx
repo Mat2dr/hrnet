@@ -7,7 +7,7 @@ const Home = () => {
     <div>
         <p>Click the button to open modal</p>
         <button onClick={ ()=> setShow(true) }>Show</button>
-        <Modal onClose={ ()=> setShow(false) } show={ show } />
+        <Modal title='Employee Created' onClose={ ()=> setShow(false) } show={ show } />
     </div>
   )
 }
