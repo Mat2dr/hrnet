@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home';
+import NewEmployee from './pages/NewEmployee';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <NavBar />
         <Routes>
             <Route path="/" exact element={<Home />} />
+            <Route path="/NewEmployee" exact element={<NewEmployee />} />
         </Routes>
     </BrowserRouter>
   );

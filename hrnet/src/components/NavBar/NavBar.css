@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#NavBar {
+    border-bottom: #F2F3F5 1px solid;
+}
+
+#NavBar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+#NavBar ul {
+    margin-left: 85px;
+    display: flex;
+    column-gap: 5px;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #344054;
+}
+
+#NavBar ul a{
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+#NavBar ul .selected {
+    background: #F9FAFB;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.NavBar-links {
+    display: flex;
+    align-items: center;
+}

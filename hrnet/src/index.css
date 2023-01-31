@@ -3,9 +3,85 @@
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#NewEmployee .content {
+  background: #FCFEFF;
+  min-height: 100vh;
+}
+
+#NewEmployee .content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  padding-top: 50px;
+}
+#NewEmployee p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #667085;
+  line-height: 1;
+  margin-top: 5px;
+}
+#NewEmployee h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #101828;
+  margin: 0;
+  line-height: 1;
+}
+
+
+#NewEmployee form {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+}
+
+#NewEmployee form label{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+#NewEmployee form input{
+  border-radius: 8px;
+  border: #D0D5DD 1px solid;
+  padding: 10px 14px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+#NewEmployee form .submit-btn{
+  color: white;
+  background: #2F80ED;
+  width: fit-content;
+  border: 0px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+#NewEmployee form .submit-btn:hover{
+  background: #5597ed;
+}
+
+.double-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.double-inputs label {
+  width: 50%;
 }

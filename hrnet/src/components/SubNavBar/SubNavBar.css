@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#SubNavBar {
+    border-bottom: #F2F3F5 1px solid;
+}
+
+#SubNavBar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+#SubNavBar ul {
+    display: flex;
+    column-gap: 5px;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #344054;
+    padding: 0;
+}
+
+#SubNavBar ul a{
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+#SubNavBar ul .selected {
+    background: #F9FAFB;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.SubNavBar-links {
+    display: flex;
+    align-items: center;
+}
