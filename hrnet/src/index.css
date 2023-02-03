@@ -85,3 +85,85 @@ code {
 .double-inputs label {
   width: 50%;
 }
+
+select {
+  border-radius: 8px;
+  border: #D0D5DD 1px solid;
+  padding: 10px 14px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+option {
+  border-radius: 8px;
+  border: #D0D5DD 1px solid;
+  padding: 10px 14px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+
+#ListEmployees .content {
+  background: #FCFEFF;
+  min-height: 100vh;
+}
+
+#ListEmployees .content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  padding-top: 50px;
+}
+#ListEmployees p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #667085;
+  line-height: 1;
+  margin-top: 5px;
+}
+#ListEmployees h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #101828;
+  margin: 0;
+  line-height: 1;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #EAECF0;
+}
+
+table {
+  border: #EDEFF2 1px solid;
+  border-radius: 14px;
+  background: white;
+}
+
+thead th:hover {
+  background: white !important;
+}
+
+th {
+  padding: 13px 25px;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: start;
+  border-bottom: #EDEFF2 1px solid !important;
+}
+
+td {
+  padding: 13px 25px;
+  border-bottom: #EDEFF2 1px solid !important;
+  color: #101828;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+tr:hover {
+  background: #FCFEFF;
+}

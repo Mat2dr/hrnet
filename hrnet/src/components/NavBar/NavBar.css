@@ -9,7 +9,7 @@ a {
 
 #NavBar .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     max-width: 1240px;
     margin: auto;
