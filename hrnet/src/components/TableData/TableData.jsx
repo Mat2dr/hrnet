@@ -1,7 +1,8 @@
 import React, {useMemo} from 'react'
-import { useTable, useSortBy } from 'react-table'
+import { useTable, useSortBy, useGlobalFilter } from 'react-table'
 import EMPLOYEES_DATA from '../../Data/mockEmployees';
 import COLUMNS from '../TableData/columns'
+import { GlobalFilter } from './GlobalFilter';
 
 
 const TableData = () => {
@@ -17,15 +18,20 @@ const TableData = () => {
         getTableBodyProps,
         headerGroups,
         rows,
-        prepareRow
+        prepareRow,
+        state,
+        setGlobalFilter,
       } = useTable({
         columns,
         data
       },
-      useSortBy)
+       useGlobalFilter, useSortBy)
+
+       const { globalFilter } = state;
 
   return (
     <div>
+        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>
         <table {...getTableProps()}>
             <thead>
                 {
