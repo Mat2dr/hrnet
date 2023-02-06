@@ -4,7 +4,7 @@ export const GlobalFilter = ( { filter, setFilter } ) => {
   return (
     <div>
         <span>
-            <input value={filter || ''} onChange={e => setFilter(e.target.value)} />
+            <input placeholder='Search' value={filter || ''} onChange={e => setFilter(e.target.value)} />
         </span>
     </div>
   )

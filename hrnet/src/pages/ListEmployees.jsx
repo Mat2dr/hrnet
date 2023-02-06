@@ -30,7 +30,6 @@ const ListEmployees = () => {
         <div className='content'>
             <div className='container'>
                 <h3>View current employees</h3>
-                <p>Show 10 entries</p>
                 <TableData/>
             </div>
         </div>

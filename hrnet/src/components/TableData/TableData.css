@@ -1,0 +1,107 @@
+table {
+    border: #EDEFF2 1px solid;
+    border-radius: 14px 14px 0 0;
+    border-bottom: 0px;
+    background: white;
+    width: 100%;
+  }
+
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #667085;
+    margin-bottom: 40px;
+  }
+
+  .table-header input {
+    border-radius: 8px;
+    border: #D0D5DD 1px solid;
+    padding: 10px 14px;
+    margin-top: 6px;
+    cursor: pointer;
+    margin-top: 0px;
+  }
+  
+  thead tr:hover {
+    background: white !important;
+  }
+  
+  th {
+    padding: 13px 25px;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: start;
+    border-bottom: #EDEFF2 1px solid !important;
+  }
+  
+  td {
+    padding: 13px 25px;
+    border-bottom: #EDEFF2 1px solid !important;
+    color: #101828;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  tr:hover {
+    background: #FCFEFF;
+  }
+  
+  #TableData  button {
+    color: #344054;
+    background: white;
+    border-radius: 8px;
+    border: #D0D5DD 1px solid ;
+    width: fit-content;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  #TableData  button:hover{
+    background: #F9FAFB;
+  }
+  
+  #TableData button:disabled,
+  #TableData button[disabled]{
+    border: 1px solid #EAECF0;
+    background-color: white;
+    color: #D0D5DD;
+  }
+  
+  .table-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 25px;
+    background-color: white;
+    border: #EDEFF2 1px solid;
+    border-radius:0 0 14px 14px;
+    border-top: 0px;
+  }
+  
+  .table-pagination .table-pagination-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: #344054;
+  }
+  
+  .table-pagination-nav input {
+    border-radius: 8px;
+    border: #D0D5DD 1px solid;
+    padding: 10px 14px;
+    margin-top: 6px;
+    cursor: pointer;
+    margin-top: 0px;
+  }
+  
+  .table-pagination-nav-button {
+   display: flex;
+   gap: 5px;
+  }
+  
+  .table-pagination-recap {
+    font-size: 14px;
+    color: #344054;
+  }

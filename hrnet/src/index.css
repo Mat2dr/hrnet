@@ -136,34 +136,3 @@ option {
   height: 1px;
   background: #EAECF0;
 }
-
-table {
-  border: #EDEFF2 1px solid;
-  border-radius: 14px;
-  background: white;
-}
-
-thead th:hover {
-  background: white !important;
-}
-
-th {
-  padding: 13px 25px;
-  color: #667085;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: start;
-  border-bottom: #EDEFF2 1px solid !important;
-}
-
-td {
-  padding: 13px 25px;
-  border-bottom: #EDEFF2 1px solid !important;
-  color: #101828;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-tr:hover {
-  background: #FCFEFF;
-}
