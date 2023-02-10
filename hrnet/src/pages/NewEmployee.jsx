@@ -2,16 +2,15 @@ import React, { useState } from 'react'
 import CalendarPicker from '../components/CalendarPicker/CalendarPicker';
 import SubNavBar from '../components/SubNavBar/SubNavBar'
 import STATES_DATA from '../Data/state';
+import { useDispatch } from 'react-redux';
+import { addEmployee } from '../redux/employeesSlice';
 
 const NewEmployee = () => {
-
-    let employees = [];
-
-    //console.log(STATES_DATA)
+    const dispatch = useDispatch();
 
     const [employee, setEmployee] = useState({
-        firstName: '',
-        lastName: '',
+        FirstName: '',
+        LastName: '',
         DateOfBirth: '',
         StartDate: '',
         Street: '',
@@ -24,11 +23,17 @@ const NewEmployee = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
-        console.log("Submited !");
-        console.log(employees);
-        employees.push(employee)
-        console.log("Employee is push in the array !");
-        console.log(employees);
+         dispatch(addEmployee({
+            FirstName: employee.FirstName,
+            LastName: employee.LastName,
+            DateOfBirth: employee.DateOfBirth,
+            StartDate: employee.StartDate,
+            Street: employee.Street,
+            City: employee.City,
+            State: employee.State,
+            ZipCode: employee.ZipCode,
+            Department: employee.Department,
+        })) 
 
         console.log(employee)
     };
@@ -45,11 +50,11 @@ const NewEmployee = () => {
                             <div className='double-inputs'>
                                 <label>
                                     First Name:
-                                    <input type="text" name="firstName" value={employee.firstName} onChange={(e) => setEmployee({ ...employee, firstName: e.target.value })} required />
+                                    <input type="text" name="FirstName" value={employee.FirstName} onChange={(e) => setEmployee({ ...employee, FirstName: e.target.value })} required />
                                 </label>
                                 <label>
                                     Last Name:
-                                    <input type="text" name="LastName" value={employee.lastName} onChange={(e) => setEmployee({ ...employee, lastName: e.target.value })} required />
+                                    <input type="text" name="LastName" value={employee.LastName} onChange={(e) => setEmployee({ ...employee, LastName: e.target.value })} required />
                                 </label>
                             </div>
 

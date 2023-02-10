@@ -2,26 +2,21 @@ import React, { useEffect, useState } from 'react'
 import SubNavBar from '../components/SubNavBar/SubNavBar'
 import EMPLOYEES_DATA from '../Data/mockEmployees'
 import TableData from '../components/TableData/TableData'
+import { useSelector } from 'react-redux'
 
 const ListEmployees = () => {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [perPage, setPerPage] = useState(10)
+  const employees = useSelector((state) => state.employees);
+  console.log(employees);
 
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    setData(EMPLOYEES_DATA.EMPLOYEES_DATA)
-    setLoading(false)
+    setData(employees)
   }, [])
   
 
   async function fetchTableData() {
-
-    setLoading(true)
-    //console.log(EMPLOYEES_DATA);
-    setData(EMPLOYEES_DATA)
-    //console.log(data);
-    setLoading(false)
+    setData(employees)
   }
 
   return (
@@ -30,7 +25,7 @@ const ListEmployees = () => {
         <div className='content'>
             <div className='container'>
                 <h3>View current employees</h3>
-                <TableData/>
+                <TableData data={data} />
             </div>
         </div>
     </div>

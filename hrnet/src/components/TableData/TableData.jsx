@@ -1,18 +1,14 @@
 import React, {useMemo} from 'react'
 import './TableData.css'
 import { useTable, useSortBy, useGlobalFilter, usePagination } from 'react-table'
-import EMPLOYEES_DATA from '../../Data/mockEmployees';
 import COLUMNS from '../TableData/columns'
 import { GlobalFilter } from './GlobalFilter';
 
 
-const TableData = () => {
-
+const TableData = (props) => {
 
     const columns = useMemo(() => COLUMNS, [])
-    const data = useMemo(() => EMPLOYEES_DATA.EMPLOYEES_DATA, [])
-
-    //console.log(data);
+    const data = props.data;
 
     const {
         getTableProps,
