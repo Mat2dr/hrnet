@@ -1,4 +1,4 @@
-const states = [
+const STATES_DATA = [
     {
         "name": "Alabama",
         "abbreviation": "AL"
@@ -237,4 +237,4 @@ const states = [
     }
 ];
 
-export default states;
+export default STATES_DATA;

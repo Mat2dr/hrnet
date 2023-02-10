@@ -18,9 +18,9 @@ const ListEmployees = () => {
   async function fetchTableData() {
 
     setLoading(true)
-    console.log(EMPLOYEES_DATA);
+    //console.log(EMPLOYEES_DATA);
     setData(EMPLOYEES_DATA)
-    console.log(data);
+    //console.log(data);
     setLoading(false)
   }
 

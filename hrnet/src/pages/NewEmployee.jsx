@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import CalendarPicker from '../components/CalendarPicker/CalendarPicker';
 import SubNavBar from '../components/SubNavBar/SubNavBar'
+import STATES_DATA from '../Data/state';
 
 const NewEmployee = () => {
 
     let employees = [];
+
+    //console.log(STATES_DATA)
 
     const [employee, setEmployee] = useState({
         firstName: '',
@@ -20,11 +23,6 @@ const NewEmployee = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-
-
-
-
-
 
         console.log("Submited !");
         console.log(employees);
@@ -73,11 +71,13 @@ const NewEmployee = () => {
                         <label>
                             State
                             <select name="state" id="State" value={employee.State} onChange={(e) => setEmployee({ ...employee, State: e.target.value })} required>
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>American Samoa</option>
-                                <option>Arizona</option>
-                                <option>Arkansas</option>
+                                {
+                                    STATES_DATA.map(states => (
+                                        <option key={states.name} value={states.name}>
+                                            {states.name}
+                                        </option>
+                                    ))
+                                }
                             </select>
                         </label>
                         <label>

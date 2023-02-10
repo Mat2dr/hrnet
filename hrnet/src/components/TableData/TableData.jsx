@@ -12,7 +12,7 @@ const TableData = () => {
     const columns = useMemo(() => COLUMNS, [])
     const data = useMemo(() => EMPLOYEES_DATA.EMPLOYEES_DATA, [])
 
-    console.log(data);
+    //console.log(data);
 
     const {
         getTableProps,
