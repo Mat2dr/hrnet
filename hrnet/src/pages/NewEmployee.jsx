@@ -4,10 +4,12 @@ import SubNavBar from '../components/SubNavBar/SubNavBar'
 import STATES_DATA from '../Data/state';
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../redux/employeesSlice';
+import { Modal } from 'dragovic-modal-package';
 
 const NewEmployee = () => {
     const dispatch = useDispatch();
 
+    const [show, setShow] = useState(false);
     const [employee, setEmployee] = useState({
         FirstName: '',
         LastName: '',
@@ -20,7 +22,8 @@ const NewEmployee = () => {
         Department: '',
     });
 
-    const submitHandler = async (e) => {
+
+    const submitHandler = (e) => {
         e.preventDefault();
 
          dispatch(addEmployee({
@@ -35,7 +38,11 @@ const NewEmployee = () => {
             Department: employee.Department,
         })) 
 
-        console.log(employee)
+        setEmployee({
+            ...employee, FirstName: "" , LastName: "", DateOfBirth: "", Street: "", City: "", State: "", ZipCode: "", Department: ""
+        })
+
+        setShow(true)
     };
 
     return (
@@ -50,7 +57,7 @@ const NewEmployee = () => {
                             <div className='double-inputs'>
                                 <label>
                                     First Name:
-                                    <input type="text" name="FirstName" value={employee.FirstName} onChange={(e) => setEmployee({ ...employee, FirstName: e.target.value })} required />
+                                    <input type="text" name="FirstName" onChange={(e) => setEmployee({ ...employee, FirstName: e.target.value })} value={employee.FirstName} required/>
                                 </label>
                                 <label>
                                     Last Name:
@@ -105,6 +112,7 @@ const NewEmployee = () => {
                     </form>
                 </div>
             </div>
+            <Modal title='Employee Created' onClose={ ()=> setShow(false) } show={ show } />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal } from '../components/Modal/Modal'
+import { Modal } from 'dragovic-modal-package'
 
 const Home = () => {
     const [show, setShow] = useState(false);
