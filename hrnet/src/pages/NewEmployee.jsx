@@ -6,6 +6,11 @@ import { useDispatch } from 'react-redux';
 import { addEmployee } from '../redux/employeesSlice';
 import { Modal } from 'dragovic-modal-package';
 
+/**
+ * @name NewEmployee
+ * @description A component for the page to add an employee
+ * @return {JSX.Element}
+ */
 const NewEmployee = () => {
     const dispatch = useDispatch();
 

@@ -3,7 +3,12 @@ import "./SubNavBar.css";
 
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+/**
+ * @name SubNavBar
+ * @description A component for the SubNavBar
+ * @return {JSX.Element}} 
+ */
+const SubNavBar = () => {
   return (
     <div id='SubNavBar'>
       <div className="container">
@@ -29,4 +34,4 @@ function CustomLink({ to, children, ...props}) {
 }
 
 
-export default NavBar
+export default SubNavBar

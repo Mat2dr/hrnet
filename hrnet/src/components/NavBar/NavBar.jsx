@@ -4,6 +4,11 @@ import "./NavBar.css";
 
 import { Link } from 'react-router-dom';
 
+/**
+ * @name NavBar
+ * @description A component for the Nav Bar
+ * @return {JSX.Element}} 
+ */
 const NavBar = () => {
 
   return (
@@ -14,7 +19,6 @@ const NavBar = () => {
             <img src={logo} alt="logo HRnet" />
           </Link>
           <ul>
-            <li><Link to='/'>Home</Link></li>
             <li><Link to='/NewEmployee' className='selected'>Employees</Link></li>
           </ul>
         </div>

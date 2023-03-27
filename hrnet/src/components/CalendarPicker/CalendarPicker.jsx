@@ -3,6 +3,12 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import "./CalendarPicker.css";
 
+/**
+ * @name CalendarPicker
+ * @description A component for the plugin date picker
+ * @param {date} {setInputDate}
+ * @return {JSX.Element}} 
+ */
 const CalendarPicker = ({ setInputDate }) => {
   const [displayedDate, setDisplayedDate] = useState(new Date())
 
