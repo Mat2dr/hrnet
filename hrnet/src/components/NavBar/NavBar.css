@@ -43,3 +43,8 @@ a {
     display: flex;
     align-items: center;
 }
+
+.NavBar-links img{
+    width: 113px;
+    height: 35px;
+}

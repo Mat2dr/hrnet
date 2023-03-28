@@ -89,13 +89,15 @@ const TableData = (props) => {
         <div className='table-pagination'>
             <div className='table-pagination-nav'>
                 <span>
-                    Go to page: {' '}
-                    <input type='number' defaultValue={pageIndex + 1} 
-                    onChange={e => {
-                        const pageNumber = e.target.value ? Number(e.target.value) - 1 : 0
-                        gotoPage(pageNumber)
-                    }}
-                    style={{width: '45px'}} />
+                    <label>
+                        Go to page: {' '}
+                        <input type='number' defaultValue={pageIndex + 1} 
+                        onChange={e => {
+                            const pageNumber = e.target.value ? Number(e.target.value) - 1 : 0
+                            gotoPage(pageNumber)
+                        }}
+                        style={{width: '45px'}} />
+                    </label>
                 </span>
                 <div className='table-pagination-nav-button'>
                     <button onClick={ ()=> gotoPage(0) } disabled={!canPreviousPage}>{'<<'}</button>
