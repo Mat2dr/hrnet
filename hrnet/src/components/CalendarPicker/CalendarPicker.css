@@ -74,6 +74,14 @@
   }
 
 
-.clear-button:hover{
+.clear-button:hover {
     background: #5597ed !important;
   }
+
+.clear-button:hover .react-datepicker__close-icon::after{
+  background: #5597ed !important;
+}
+
+.react-datepicker__close-icon::after {
+  background-color: #2F80ED !important;
+}
